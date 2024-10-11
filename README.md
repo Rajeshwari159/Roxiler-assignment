@@ -21,18 +21,18 @@ How to Run the Project
 1. Install Dependencies
 First, clone the project and install the required packages.
 
-git clone https://github.com/yourusername/mern-stack-coding-challenge.git
+git clone https://github.com/yourusername/Roxiler-assignment.git
 cd mern-stack-coding-challenge
 npm install
 
 For the frontend, go to the client folder and install the packages:
-cd client
+cd frontend
 npm install
 
 
 2. Set Up Environment Variables
 Create a .env file in the project folder with these variable:
-PORT=5000
+PORT=8000
 MONGO_URI=your_mongodb_connection_string
 API_URL=https://s3.amazonaws.com/roxiler.com/product_transaction.json
 
@@ -42,35 +42,33 @@ npm start
 
 4. Start the Frontend
 Go to the client folder and start the frontend server:
-cd client
-npm start
+cd frontend
+npm run dev
 
 
 APIs in the Project
 Fetch Data:
 
-GET /api/init
+GET /initialize-database
 Initializes the database by fetching data from the third-party API.
 
 List Transactions:
 
-GET /api/transactions?month=March
+GET /transactions?month=March
 Shows a list of transactions for the selected month.
 
 Get Statistics:
 
-GET /api/statistics?month=March
+GET /statistics?month=March
 Provides total sales, sold items, and unsold items for a selected month.
 
 Bar Chart Data:
 
-GET /api/bar-chart?month=March
+GET /bar-chart?month=March
 Returns data for the price range of items.
 
 Pie Chart Data:
 
-GET /api/pie-chart?month=March
+GET /pie-chart?month=March
 Shows the number of items in each category.
 
-License
-This project is licensed under the MIT License.
