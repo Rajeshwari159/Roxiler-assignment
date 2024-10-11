@@ -21,7 +21,7 @@ How to Run the Project
 1. Install Dependencies
 First, clone the project and install the required packages.
 
-git clone https://github.com/yourusername/Roxiler-assignment.git
+git clone https://github.com/Rajeshwari159/Roxiler-assignment.git
 cd mern-stack-coding-challenge
 npm install
 
