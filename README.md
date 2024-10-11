@@ -1,69 +1,76 @@
-# ROXILER MERN Stack Coding Challenge
+MERN Stack Coding Challenge
 
-Welcome to the Roxiler MERN Stack coding challenge repository! This repository contains the source code for a web application developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It was created using Vite for efficient development.
+This project is a MERN stack application that works with data from a third-party API. It includes features for listing transactions, showing statistics, and displaying charts using the data.
 
-## How to Use
+Features
 
-To get started with this repository, follow the steps below:
+Fetch Data: Get data from a third-party API and save it to the database.
+List Transactions: Show a list of transactions with search and pagination options.
+View Statistics: Get total sales, number of sold items, and unsold items for a chosen month.
+Bar Chart: Display the number of items in different price ranges.
+Pie Chart: Show how many items belong to each category.
 
-1. **Clone the Repository**: 
-   ```bash
-   git clone https://github.com/YashDxr/Roxiler-Assignment.git
+Technologies Used
+Frontend: React.js
+Backend: Node.js, Express.js
+Database: MongoDB
+API: JSON data from a third-party URL
 
+How to Run the Project
 
-2. **Navigate to the Project Directory**:
+1. Install Dependencies
+First, clone the project and install the required packages.
 
-  ```
-  cd .\Roxiler-Assignment\
+git clone https://github.com/yourusername/mern-stack-coding-challenge.git
+cd mern-stack-coding-challenge
+npm install
 
-  ```
-
-
-3. **Install Dependencies**:
-- For Backend (Node.js / Express.js):
-  ```
-  cd backend
-  npm install
-  ```
-- For Frontend (React.js):
-  ```
-  cd frontend
-  npm install
-  ```
+For the frontend, go to the client folder and install the packages:
+cd client
+npm install
 
 
-4. **Setup MongoDB Connection**:
-- Create a `.env` file in the `backend` directory if it doesn't exist.
-- Add your MongoDB connection string with username and password in the `.env` file:
-  ```
-  MONGODB_URL=your_mongodb_connection_string
-  
-  ```
+2. Set Up Environment Variables
+Create a .env file in the project folder with these variable:
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+API_URL=https://s3.amazonaws.com/roxiler.com/product_transaction.json
+
+3. Start the Backend
+Start the backend server:
+npm start
+
+4. Start the Frontend
+Go to the client folder and start the frontend server:
+cd client
+npm start
 
 
-5. **Set Backend URL in Frontend Environment file**:
-- Create a `.env` file in the `frontend` directory if it doesn't exist.
-- Add the backend URL in the `.env` file:
-  ```
-  VITE_BACKEND_URL=http://localhost:your_backend_port
-  
-  ```
-  
+APIs in the Project
+Fetch Data:
 
-6. **Run the Application**:
-- Start the backend server:
-  ```
-  cd backend
-  npm start
-  ```
-- Start the frontend development server:
-  ```
-  cd frontend
-  npm run dev
-  ```
+GET /api/init
+Initializes the database by fetching data from the third-party API.
 
+List Transactions:
 
-7. **Access the Application**:
-Once the servers are running, you can access the application by visiting `http://localhost:5173` in your web browser.
+GET /api/transactions?month=March
+Shows a list of transactions for the selected month.
 
-# THANK YOU
+Get Statistics:
+
+GET /api/statistics?month=March
+Provides total sales, sold items, and unsold items for a selected month.
+
+Bar Chart Data:
+
+GET /api/bar-chart?month=March
+Returns data for the price range of items.
+
+Pie Chart Data:
+
+GET /api/pie-chart?month=March
+Shows the number of items in each category.
+
+License
+This project is licensed under the MIT License.
